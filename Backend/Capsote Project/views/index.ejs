@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+<body class="p-3 m-0 border-0 bd-example m-0 border-0">
+    <%- include("parties/header.ejs") %>
+    <div class="justify-content-center d-flex mb-5">
+            <div class="col-3 d-flex justify-content-center rounded" style="background-color: #a683e3;">
+                    <h1 style="color: white;"><%= time.todayDateString %>, <%= time.todayMonth%> <%= time.todayDateNumber%></h1>
+            </div>
+    </div>
+    <div class="justify-content-center d-flex mb-5">
+        <ul class="list-group col-3">
+            <% for (let i=0; i < tasks.length; i++){ %>
+            <li class="list-group-item">
+                <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox"/>
+                <label class="form-check-label" for="firstCheckbox"><%= tasks[i] %></label>
+            </li>
+            <% } %>
+        </ul>
+    </div>
+    <div class="justify-content-center d-flex mb-3">
+        <div class="col-3">
+            <form action="/submit" method="POST">
+                <div class="input-group mb-3">
+                    <input name="newTask" type="text" class="form-control" placeholder="New Task" aria-label="New Task" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

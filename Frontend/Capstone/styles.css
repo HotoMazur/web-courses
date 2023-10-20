@@ -1,0 +1,84 @@
+.container-hero{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 2fr;
+    height: 88vh;
+    background-color: #EF9595;
+    width: 100%;
+}
+.top-cloud{
+    grid-column-start: 3;
+}
+.description-name{
+    grid-column-start: 2;
+    grid-row-start: 2;
+    justify-self: center;
+}
+.description-job{
+    grid-column-start: 2;
+    grid-row-start: 3;
+    justify-self: center;
+}
+.my-name{
+    font-family: 'Dancing Script', cursive;
+    color: #EFD595;
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+}
+.my-job{
+    font-family: 'Playfair Display', serif;
+}
+.bottom-cloud{
+    grid-column-start: 1;
+    grid-row-start: 4;
+    justify-self: center;
+}
+.mountain{
+    grid-column-start: 2;
+    grid-row-start: 5;
+    justify-self: center;
+}
+@media (max-width: 500px) {
+    .container-hero{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        height: 70vh;
+        background-color: #EF9595;
+        width: 100%;
+    }
+    .top-cloud{
+        grid-column-start: 3;
+    }
+    .description-name{
+        grid-column-start: 2;
+        grid-row-start: 2;
+        justify-self: center;
+    }
+    .description-job{
+        grid-column-start: 2;
+        grid-row-start: 3;
+        justify-self: center;
+    }
+    .my-name{
+        font-family: 'Dancing Script', cursive;
+        color: #EFD595;
+        font-size: 4.5rem;
+        margin-bottom: 5rem;
+    }
+    .my-job{
+        font-family: 'Playfair Display', serif;
+        font-size: 2rem;
+    }
+    .bottom-cloud{
+        grid-column-start: 1;
+        grid-row-start: 4;
+        justify-self: center;
+    }
+    .mountain{
+        grid-column-start: 2;
+        /*grid-row-start: 5;*/
+        justify-self: center;
+        align-items: end;
+    }
+}
